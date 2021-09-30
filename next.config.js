@@ -6,6 +6,7 @@ module.exports = {
 
   images:{
     domains: ['localhost'],
+    reactStrictMode: false,
   },
   // pwa: {
   //   dest: "public",

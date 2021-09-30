@@ -70,10 +70,11 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink href={item.path} key={index}>
-                  <a>
+            <DropdownLink href={item.path} >
+                  <a key={index} >
                     {item.icon}
-                    <SidebarLabel>{item.title}</SidebarLabel>               
+                    <SidebarLabel>{item.title}</SidebarLabel>  
+                    {/* <br />        className={item.cName}      */}
                 </a>
             </DropdownLink>
 

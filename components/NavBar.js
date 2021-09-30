@@ -38,7 +38,7 @@ export default function NavBar() {
               </li>
               <li className="nav-item">
                 <Link href="/login">
-                  <a className="nav-link active">
+                  <a className="nav-link active" >
                     Login
                   </a>
                 </Link>
@@ -58,17 +58,17 @@ export default function NavBar() {
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" >
           <li className="navbar-toggle" >
-            <Link href="/" className="menu-bars">
-              <a >
+            <Link href="/" >
+              <a className="menu-bars">
                 <AiIcons.AiOutlineClose onClick={showSidebar} />
               </a>
             </Link>
           </li>
           {SideBarData.map((item, index) => {
             return (
-              <ul key={index}>
-              <li className={item.cName}>
-                <SubMenu item={item}  />
+              <ul key={index} >
+              <li className={item.cName} >
+                <SubMenu item={item} />
               </li>
               </ul>
               //   <li key={index} className={item.cName}>

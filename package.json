@@ -16,6 +16,8 @@
     "apollo-link-context": "^1.0.20",
     "apollo-link-http": "^1.5.17",
     "apollo-upload-client": "^16.0.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "babel-preset-next": "^1.4.0",
     "bootstrap": "^5.0.1",
     "chokidar": "^3.5.1",
     "express": "^4.17.1",

@@ -23,7 +23,7 @@ export default function Home() {
     <>    
     
     {/* <Dropzone/> */}
-    <Card/> 
+    {/* <Card/>  */}
     {/* <GetAsset/>   */}
       {/* <BasicTable/> */}
       {/* <Sidebar/> */}

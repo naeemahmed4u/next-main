@@ -243,7 +243,7 @@ export default function AddAsset(props) {
             <hr />
             <h4>Site, Location, Category and Department</h4>
             <label htmlFor="site">Site</label>
-            <Field as="select" name="site">
+            <Field as="select" name="site" className="form-control shadow-none form-select">
               <option value="Select Site">Select Site</option>
               {getSites.map((index) => (
                 <option key={index.id} value={index.site}>
@@ -251,9 +251,10 @@ export default function AddAsset(props) {
                 </option>
               ))}
             </Field>
-            <button type="button" onClick={() => setShowSite(true)}>
+            <button type="button" onClick={() => setShowSite(true)} className="btn btn-dark">
               +New
             </button>
+            <br />
             <Modal
               onClose={() => {
                 setShowSite(false), refetchSite();
@@ -262,8 +263,8 @@ export default function AddAsset(props) {
             >
               <Site refetch={()=>refetchSite()}/>
             </Modal>
-            <label>Category</label>
-            <Field as="select" name="category">
+            <label htmlFor="category">Category</label>
+            <Field as="select" name="category" className="form-control shadow-none form-select">
               <option value="Select Category">Select Category</option>
               {getCategorys.map((i) => (
                 <option key={i.id} value={i.category}>
@@ -271,7 +272,7 @@ export default function AddAsset(props) {
                 </option>
               ))}
             </Field>
-            <button type="button" onClick={() => setShowCategory(true)}>
+            <button type="button" onClick={() => setShowCategory(true)} className="btn btn-dark">
               +New
             </button>
             <Modal
@@ -282,9 +283,9 @@ export default function AddAsset(props) {
             >
               <Category refetch={()=>refetchCategory()} />
             </Modal>{" "}
-            <br /> <br />
+            <br /> 
             <label>Location</label>
-            <Field as="select" name="location">
+            <Field as="select" name="location" className="form-control shadow-none form-select">
               <option value="Select Location">Select Location</option>
               {getLocations.map((i) => (
                 <option key={i.id} value={i.location}>
@@ -292,7 +293,7 @@ export default function AddAsset(props) {
                 </option>
               ))}
             </Field>
-            <button type="button" onClick={() => setShowLocation(true)}>
+            <button type="button" onClick={() => setShowLocation(true)} className="btn btn-dark">
               +New
             </button>
             <Modal
@@ -303,8 +304,9 @@ export default function AddAsset(props) {
             >
               <Location refetch={()=>refetchLocation()}/>
             </Modal>
+            <br />
             <label>Department</label>
-            <Field as="select" name="department">
+            <Field as="select" name="department" className="form-control shadow-none form-select">
               <option value="Select Department">Select Department</option>
               {getDepartments.map((i) => (
                 <option key={i.id} value={i.department}>
@@ -312,7 +314,7 @@ export default function AddAsset(props) {
                 </option>
               ))}
             </Field>
-            <button type="button" onClick={() => setShowDepartment(true)}>
+            <button type="button" onClick={() => setShowDepartment(true)} className="btn btn-dark">
               +New
             </button>
             <Modal
@@ -348,8 +350,8 @@ export default function AddAsset(props) {
             />
             <TextField label="Salvage Value" name="salvageValue" type="text" />
 
-
-            <Field name="depreciationMethod" as="select" >
+            <label htmlFor="depreciationMethod">Depreciation Method</label>
+            <Field name="depreciationMethod" as="select" className="form-control shadow-none form-select">
               <option value="Straight Line">Straight Line</option>
               <option value="Declining Balance">Declining Balance</option>
             </Field>
