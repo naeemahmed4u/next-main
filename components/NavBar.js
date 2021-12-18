@@ -9,6 +9,58 @@ import { SideBarData } from "./SideBarData";
 import SubMenu from "./SubMenu";
 // import Sidebar from "./Sidebar";
 import { AuthContext } from '../context/auth';
+import { slide as Menu } from 'react-burger-menu';
+// import styles from '../styles/Menu.module.css'
+// import Sidebarnew from "./Sidebarnew";
+
+
+var styles = {
+  bmBurgerButton: {
+    position: 'fixed',
+    width: '36px',
+    height: '30px',
+    left: '36px',
+    top: '30px',
+    
+  },
+  bmBurgerBars: {
+    background: '#fff'
+  },
+  bmBurgerBarsHover: {
+    background: '#a90000'
+  },
+  bmCrossButton: {
+    height: '24px',
+    width: '24px'
+  },
+  bmCross: {
+    background: '#bdc3c7'
+  },
+  bmMenuWrap: {
+    position: 'fixed',
+    height: '100%'
+  },
+  bmMenu: {
+    background: '#373a47',      
+    padding: '2.5em 1.5em 0',
+    fontSize: '1.15em'
+    
+  },
+  bmMorphShape: {
+    fill: '#373a47'
+  },
+  bmItemList: {    
+    color: '#b8b7ad',    
+    padding: '0.8em'
+  },
+  bmItem: {
+    display: 'inline-block',       
+    color:'red' 
+  },
+  bmOverlay: {
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+}
 
 
 export default function NavBar() {
@@ -16,8 +68,7 @@ export default function NavBar() {
   const { user } = useContext(AuthContext);
 
   const showSidebar = () => {
-  if (user)
-    {setSidebar(!sidebar)}
+    if (user) { setSidebar(!sidebar) }
   };
 
   return (
@@ -26,9 +77,9 @@ export default function NavBar() {
 
       <nav className="navbar navbar-expand-md navbar-dark bg-primary">
         <div className="container-fluid">
-          <a className="navbar-brand abs" >
+          {/* <a className="navbar-brand abs" >
             <FaIcons.FaBars onClick={showSidebar} />
-          </a>
+          </a> */}
           <div className="navbar-collapse collapse" id="collapseNavbar">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
@@ -55,7 +106,22 @@ export default function NavBar() {
         </div>
       </nav>
 
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+      {/* <Sidebarnew /> */}
+      
+        <Menu styles={styles}  >
+        
+        <Link href="/AddAsset">
+          <a className={styles.bmItem}>ADD ASSET</a></Link>
+          <br />
+        <Link href="/GetAsset" >
+
+          <a className="menu-item" >ASSET DETAILS</a></Link>
+          <br />
+          <a  className="menu-item" href="/contact">Contact</a>
+        
+      </Menu>
+
+      {/* <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" >
           <li className="navbar-toggle" >
             <Link href="/" >
@@ -67,9 +133,9 @@ export default function NavBar() {
           {SideBarData.map((item, index) => {
             return (
               <ul key={index} >
-              <li className={item.cName} >
-                <SubMenu item={item} />
-              </li>
+                <li className={item.cName} >
+                  <SubMenu item={item} />
+                </li>
               </ul>
               //   <li key={index} className={item.cName}>
               //     <Link href={item.path}>
@@ -83,7 +149,7 @@ export default function NavBar() {
             );
           })}
         </ul>
-      </nav>
+      </nav> */}
       {/* </IconContext.Provider> */}
     </>
   );

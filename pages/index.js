@@ -22,19 +22,20 @@ export default function Home() {
   return (
     <>    
     
-    {/* <Dropzone/> */}
-    {/* <Card/>  */}
-    {/* <GetAsset/>   */}
-      {/* <BasicTable/> */}
-      {/* <Sidebar/> */}
-      {/* <AddAsset/> */}
-     {/* <Site/> */}
-     {/* <Category/> */}
-     {/* <Modal/>
-     <Location /> */}
-     {/* <Department /> */}
-      {/* <Upload /> */}
-      {/* <Files /> */}
+    <Card/> 
+
+    {/* <Dropzone/>
+    <GetAsset/>  
+      <BasicTable/>
+     <Sidebar/>
+      <AddAsset/>
+     <Site/>
+     <Category/>
+     <Modal/>
+      <Location /> 
+      <Department /> 
+       <Upload />
+       <Files />  */}
     </>
   )
 }

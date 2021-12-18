@@ -8,7 +8,7 @@ import gql from 'graphql-tag';
 export default function Card() {
   const { data: { getAssets = [] } = {} } = useQuery(FETCH_ASSET_QUERY);
   const {cost} = getAssets;
-//   console.log(cost);
+  console.log(getAssets.cost);
 
     return (
         <>
@@ -20,21 +20,21 @@ export default function Card() {
                         <p>Welcome to Sabri Solutions</p>
                     </div>
                 </div>
-                <div className={styles.card}>
+                <div className={styles.card1}>
                     <div className="content">
                         <h5>NAV: Net Asset Value</h5>
                         <h3>Hello World</h3>
                         <p>Welcome to Sabri Solutions</p>
                     </div>
                 </div>
-                <div className={styles.card}>
+                <div className={styles.card2}>
                     <div className="content">
                         <h5>Value of Assets</h5>
                         <h3>Hello World</h3>
                         <p>Welcome to Sabri Solutions</p>
                     </div>
                 </div>
-                <div className={styles.card}>
+                <div className={styles.card3}>
                     <div className="content">
                         <h5>Purchase in Fiscal Year</h5>
                         <h3>Hello World</h3>
