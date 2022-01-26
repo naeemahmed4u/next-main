@@ -1,0 +1,19 @@
+.footer
+{
+    width: 100vw;
+    height: 1rem;    
+    background-color: #0a183d; 
+    margin-top: auto;
+    height: 100vh;    
+    position: fixed;
+}
+
+.footer p {
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 5rem;
+    
+}
